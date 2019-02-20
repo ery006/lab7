@@ -11,6 +11,8 @@ $(document).ready(function() {
 function initializePage() {
 	$(".likeBtn").click(function(){
 		// console.log("HI");
-		gtag("send", "event", "like", "click");
+		gtag('event', 'click', {
+  		'event_category': 'like'
+	});
 	});
 }
