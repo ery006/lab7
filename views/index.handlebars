@@ -14,11 +14,14 @@
 <body>
 	<div class="container">
 		<div class="jumbotron">
-			<h1>Michael Bernstein</h1>
+			<h1>Eric Yang</h1>
 			<p>human-computer interaction &middot; social computing &middot; crowdsourcing</p>
 		</div>
 
 		<h4>Projects</h4>
+		{{#if viewAlt}}
+			Min! <button class="likeBtn">Like</button>
+		{{else}}
 		{{#each projects}}
 			<div class="project" id="{{id}}">
 				<div class="thumbnail">
@@ -32,9 +35,22 @@
 			</div>
 		{{/each}}
 
+		{{/if}}
+
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 	<script src="/js/introHCI.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134834848-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-134834848-1');
+</script>
+
 </body>
 </html>
